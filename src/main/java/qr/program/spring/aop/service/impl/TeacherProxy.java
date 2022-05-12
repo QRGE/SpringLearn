@@ -21,4 +21,12 @@ public class TeacherProxy implements ITeacher {
         System.out.println("-----------TeacherProxyEnd----------");
         return null;
     }
+
+    @Override
+    public String sing() {
+        System.out.println("-----------TeacherProxyStart--------");
+        System.out.println("没人心疼的滋味");
+        System.out.println("-----------TeacherProxyEnd----------");
+        return "唱歌";
+    }
 }

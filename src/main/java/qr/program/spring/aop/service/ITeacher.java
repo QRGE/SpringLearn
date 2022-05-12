@@ -7,4 +7,6 @@ package qr.program.spring.aop.service;
 public interface ITeacher {
 
     String teach();
+
+    String sing();
 }
