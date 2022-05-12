@@ -3,7 +3,7 @@ package qr.program.spring.aop.service;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import qr.program.spring.aop.service.UserService;
+import qr.program.spring.aop.service.impl.UserService;
 
 /**
  * @Author qr

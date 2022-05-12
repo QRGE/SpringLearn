@@ -1,4 +1,4 @@
-package qr.program.spring.aop.service;
+package qr.program.spring.aop.service.impl;
 
 import org.springframework.stereotype.Service;
 import qr.program.spring.aop.annotation.AutoLog;
