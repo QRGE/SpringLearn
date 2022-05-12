@@ -6,6 +6,7 @@ import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
+import qr.program.spring.aop.annotation.AutoLog;
 
 import java.util.Arrays;
 
@@ -67,6 +68,12 @@ public class LogAop {
     public Object around(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("----------AroundStart----------");
         Object result = pjp.proceed();
+        MethodSignature signature = (MethodSignature) pjp.getSignature();
+        AutoLog autoLog = signature.getMethod().getAnnotation(AutoLog.class);
+        if (autoLog != null) {
+            System.out.println("AutoLog's value: " + autoLog.value());
+            System.out.println("AutoLog's flag: " + autoLog.flag());
+        }
         System.out.println("----------AroundENd------------");
         return result;
     }

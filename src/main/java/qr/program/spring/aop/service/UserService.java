@@ -1,6 +1,7 @@
 package qr.program.spring.aop.service;
 
 import org.springframework.stereotype.Service;
+import qr.program.spring.aop.annotation.AutoLog;
 
 /**
  * @Author qr
@@ -17,6 +18,7 @@ public class UserService {
         System.out.println("我是方法B: " + b);
     }
 
+    @AutoLog(flag = false, value = "你好哇")
     public String serviceC(String c) {
         System.out.println("----------原方法执行开始----------");
         System.out.println("我是方法C: " + c);
