@@ -8,6 +8,6 @@ public class Main {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
         Person person = context.getBean("person", Person.class);
         person.work();
-        context.destroy();
+        context.close();
     }
 }

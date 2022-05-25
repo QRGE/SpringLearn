@@ -58,4 +58,5 @@ public class Person implements InitializingBean, BeanFactoryAware, BeanNameAware
     public void work(){
         System.out.println("Bean使用中：工作，只有对社会没有用的人才放假。。");
     }
+
 }
